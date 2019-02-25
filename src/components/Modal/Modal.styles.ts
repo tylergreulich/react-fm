@@ -60,6 +60,7 @@ export const ModalContainer = styled.div<Props>`
   background-color: ${props => props.theme.white};
   flex-direction: column;
   margin: 0 auto;
+  overflow-y: scroll;
   height: ${props => (props.isErrorModal ? '10rem' : '35rem')};
   animation: 0.3s ${props => (props.isErrorModal ? fadeInFurther : fadeIn)}
     ease-in forwards;
