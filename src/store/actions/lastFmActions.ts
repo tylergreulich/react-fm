@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { Dispatch } from 'redux';
 import uuidv4 from 'uuid/v4';
-import { YOUTUBE_API_KEY } from '../../config';
 import { VideoItemData } from './actions.interface';
 import {
   SET_CURRENT_SONG,
@@ -27,7 +26,9 @@ export const setCurrentVideoUrl = (
 
   const response: AxiosResponse<VideoItemData> | void = await axios
     .get(
-      `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&part=snippet&q=
+      `https://www.googleapis.com/youtube/v3/search?key=${
+        process.env.REACT_APP_YOUTUBE_API_KEY
+      }&part=snippet&q=
       ${songArtist + ' ' + songName}&type=video`
     )
     .catch(error => console.error(error));

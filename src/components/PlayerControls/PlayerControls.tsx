@@ -51,10 +51,6 @@ const PlayerControls: React.FunctionComponent<PlayerControlsProps> = ({
                 {isVideoLoading ? (
                   <Spinner
                     isVideoLoading={isVideoLoading}
-                    style={{
-                      zIndex: '1000000',
-                      margin: '0 auto'
-                    }}
                     isMobileDrawer={true}
                   />
                 ) : (

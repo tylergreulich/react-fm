@@ -4,7 +4,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import uuidv4 from 'uuid/v4';
-import { LAST_FM_API_KEY } from '../../../config';
 import { Artist } from '../../../shared/interfaces/Artist.interface';
 import { GetArtistsBySearchResultsData } from '../../../store/actions/actions.interface';
 import { getArtistInfo } from '../../../store/actions/artist.actions';
@@ -40,7 +39,9 @@ const Search: React.FunctionComponent<SearchProps> = ({
         .get(
           `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${
             currentTarget.value
-          }&api_key=${LAST_FM_API_KEY}&limit=5&format=json`
+          }&api_key=${
+            process.env.REACT_APP_LAST_FM_API_KEY
+          }&limit=5&format=json`
         )
         .catch(error => console.error(error));
 

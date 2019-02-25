@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { RouteComponentProps } from 'react-router-dom';
 import { Dispatch } from 'redux';
-import { LAST_FM_API_KEY } from '../../config';
 import { ArtistData, TagData, TrackData } from './actions.interface';
 import { setError, setLoading, setModal } from './lastFmActions';
 import {
@@ -19,7 +18,9 @@ export const getGenreInfo = (
 
   const response: AxiosResponse<TagData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genreName}&api_key=${LAST_FM_API_KEY}&format=json`
+      `http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genreName}&api_key=${
+        process.env.REACT_APP_LAST_FM_API_KEY
+      }&format=json`
     )
     .catch(error => console.error(error));
 
@@ -48,7 +49,9 @@ export const getGenreTopArtists = (genreName: string) => async (
 ) => {
   const response: AxiosResponse<ArtistData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${genreName}&limit=9&api_key=${LAST_FM_API_KEY}&format=json`
+      `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${genreName}&limit=9&api_key=${
+        process.env.REACT_APP_LAST_FM_API_KEY
+      }&format=json`
     )
     .catch(error => console.error(error));
 
@@ -65,7 +68,9 @@ export const getGenreTopTracks = (genreName: string) => async (
 ) => {
   const response: AxiosResponse<TrackData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${genreName}&limit=15&api_key=${LAST_FM_API_KEY}&format=json`
+      `http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${genreName}&limit=15&api_key=${
+        process.env.REACT_APP_LAST_FM_API_KEY
+      }&format=json`
     )
     .catch(error => console.error(error));
 
