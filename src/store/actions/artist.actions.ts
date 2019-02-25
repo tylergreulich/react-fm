@@ -23,7 +23,7 @@ export const getArtistInfo = (
 
   const response: AxiosResponse<any> | any = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
@@ -57,7 +57,7 @@ export const getArtistSimilarArtists = (artistName: string) => async (
 
   const response: AxiosResponse<GetSimilarArtistsData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${artistName}&limit=9&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${artistName}&limit=9&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
@@ -79,7 +79,7 @@ export const getArtistTopTracks = (artistName: string) => async (
 
   const response: AxiosResponse<TopTrackData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artistName}&limit=15&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artistName}&limit=15&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
@@ -102,7 +102,7 @@ export const getArtistsBySearch = (searchInput: string) => async (
     GetArtistsBySearchResultsData
   > | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${searchInput}&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${searchInput}&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&limit=10&format=json`
     )

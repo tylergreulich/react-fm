@@ -37,7 +37,7 @@ const Search: React.FunctionComponent<SearchProps> = ({
         GetArtistsBySearchResultsData
       > | void = await axios
         .get(
-          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${
+          `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${
             currentTarget.value
           }&api_key=${
             process.env.REACT_APP_LAST_FM_API_KEY

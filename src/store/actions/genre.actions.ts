@@ -18,7 +18,7 @@ export const getGenreInfo = (
 
   const response: AxiosResponse<TagData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genreName}&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=${genreName}&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
@@ -49,7 +49,7 @@ export const getGenreTopArtists = (genreName: string) => async (
 ) => {
   const response: AxiosResponse<ArtistData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${genreName}&limit=9&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${genreName}&limit=9&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
@@ -68,7 +68,7 @@ export const getGenreTopTracks = (genreName: string) => async (
 ) => {
   const response: AxiosResponse<TrackData> | void = await axios
     .get(
-      `http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${genreName}&limit=15&api_key=${
+      `https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${genreName}&limit=15&api_key=${
         process.env.REACT_APP_LAST_FM_API_KEY
       }&format=json`
     )
