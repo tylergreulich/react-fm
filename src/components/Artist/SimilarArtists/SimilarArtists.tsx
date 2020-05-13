@@ -11,8 +11,6 @@ import { SimilarArtistsProps } from './SimilarArtists.interface'
 const SimilarArtists: React.FunctionComponent<SimilarArtistsProps> = ({
   artists
 }) => {
-  console.log(artists)
-
   return (
     <ArtistContainer>
       {artists &&

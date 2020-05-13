@@ -5,7 +5,6 @@ var react_router_dom_1 = require("react-router-dom");
 var Artist_styles_1 = require("../../../shared/styles/Artist.styles");
 var SimilarArtists = function (_a) {
     var artists = _a.artists;
-    console.log(artists);
     return (react_1["default"].createElement(Artist_styles_1.ArtistContainer, null, artists &&
         artists.map(function (_a) {
             var mbid = _a.mbid, image = _a.image, name = _a.name;
