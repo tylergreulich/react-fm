@@ -1,9 +1,9 @@
 export interface Tag {
-  name?: string;
-  reach?: number;
-  total?: number;
+  name?: string
+  reach?: number
+  total?: number
   wiki?: {
-    content: string;
-    summary: string;
-  };
+    content: string
+    summary: string
+  }
 }

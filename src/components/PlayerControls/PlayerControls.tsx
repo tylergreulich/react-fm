@@ -42,8 +42,8 @@ const PlayerControls: React.FunctionComponent<PlayerControlsProps> = ({
       >
         <ControlsWrapper>
           <CurrentSongContainer>
-            <SongArtist>{currentSong.songArtist}</SongArtist>
-            <SongTitle>{currentSong.songName}</SongTitle>
+            <SongArtist>{currentSong!.songArtist}</SongArtist>
+            <SongTitle>{currentSong!.songName}</SongTitle>
           </CurrentSongContainer>
           <IconContainer>
             {currentVideoUrl && currentVideoUrl.length > 1 ? (

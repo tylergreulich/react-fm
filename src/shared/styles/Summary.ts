@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Summary = styled.p`
   color: ${props => props.theme.darkGrey};
@@ -10,4 +10,4 @@ export const Summary = styled.p`
     margin-top: 0.5rem;
     display: table;
   }
-`;
+`

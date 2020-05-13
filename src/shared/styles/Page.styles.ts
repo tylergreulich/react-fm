@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { pxToEm } from '../pxToEm';
+import styled from 'styled-components'
+import { pxToEm } from '../pxToEm'
 
 interface Props {
-  currentVideoUrl: string;
+  currentVideoUrl: string
 }
 
 export const PageContainer = styled.div<Props>`
@@ -17,7 +17,7 @@ export const PageContainer = styled.div<Props>`
   @media (max-width: ${pxToEm(900)}) {
     grid-template-columns: 1fr 1fr;
   }
-`;
+`
 
 export const PageInfoWrapper = styled.div`
   display: flex;
@@ -28,4 +28,4 @@ export const PageInfoWrapper = styled.div`
     grid-column-start: 1;
     grid-column-end: -1;
   }
-`;
+`

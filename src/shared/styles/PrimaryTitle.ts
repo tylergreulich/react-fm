@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const PrimaryTitle = styled.h2`
   font-weight: 500;
@@ -6,4 +6,4 @@ export const PrimaryTitle = styled.h2`
   text-transform: capitalize;
   margin-bottom: 2rem;
   color: ${props => props.theme.black};
-`;
+`

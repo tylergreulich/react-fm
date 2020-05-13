@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export const isVideoLoadingHook = () => {
-  const [isVideoLoading, setIsVideoLoading] = useState<boolean>(true);
+  const [isVideoLoading, setIsVideoLoading] = useState<boolean>(true)
 
-  return { isVideoLoading, setIsVideoLoading };
-};
+  return { isVideoLoading, setIsVideoLoading }
+}

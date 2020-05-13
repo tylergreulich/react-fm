@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { pxToEm } from '../pxToEm';
+import styled from 'styled-components'
+import { pxToEm } from '../pxToEm'
 
 export const TracksHeader = styled.div`
   @media (max-width: ${pxToEm(640)}) {
@@ -16,7 +16,7 @@ export const TracksHeader = styled.div`
     font-weight: 500;
     text-transform: uppercase;
   }
-`;
+`
 
 export const TrackLabelContainer = styled.ul`
   display: flex;
@@ -24,11 +24,11 @@ export const TrackLabelContainer = styled.ul`
   justify-content: space-between;
   padding: 0 5rem;
   margin-bottom: 0.75rem;
-`;
+`
 
 export const TrackLabel = styled.li`
   font-size: 1.35rem;
-`;
+`
 
 export const TrackBox = styled.span`
   transform: translate(-0.5rem, 3rem) scaleX(113);
@@ -37,4 +37,4 @@ export const TrackBox = styled.span`
   background-color: ${props => props.theme.secondaryLight};
   height: 1.25rem;
   transform-origin: left;
-`;
+`

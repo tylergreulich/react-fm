@@ -1,21 +1,21 @@
-import { Image } from './Image.interface';
+import { Image } from './Image.interface'
 
 export interface Track {
   attr: {
-    rank: number;
-  };
+    rank: number
+  }
   artist: {
-    mbid: string;
-    name: string;
-    url: string;
-  };
-  duration: string;
-  image: Image;
-  mbid: string;
-  name: string;
+    mbid: string
+    name: string
+    url: string
+  }
+  duration: string
+  image: Image
+  mbid: string
+  name: string
   streamable: {
-    text: string;
-    fulltrack: string;
-  };
-  url: string;
+    text: string
+    fulltrack: string
+  }
+  url: string
 }

@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
+import React from 'react'
+import ReactPlayer from 'react-player'
 
 export const playerControlsHook = () => {
-  const playerRef = React.createRef<ReactPlayer>();
+  const playerRef = React.createRef<ReactPlayer>()
 
-  const [isPlaying, setIsPlaying] = React.useState<boolean>(true);
+  const [isPlaying, setIsPlaying] = React.useState<boolean>(true)
 
   const toggleIsPlaying = () => {
     if (playerRef.current && playerRef.current.props.playing) {
-      setIsPlaying(false);
+      setIsPlaying(false)
     } else {
-      setIsPlaying(true);
+      setIsPlaying(true)
     }
-  };
+  }
 
-  return { isPlaying, toggleIsPlaying, playerRef };
-};
+  return { isPlaying, toggleIsPlaying, playerRef }
+}

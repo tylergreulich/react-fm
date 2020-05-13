@@ -1,16 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   ArtistContainer,
   ArtistImage,
   ArtistName,
   ImageContainer
-} from '../../../shared/styles/Artist.styles';
-import { SimilarArtistsProps } from './SimilarArtists.interface';
+} from '../../../shared/styles/Artist.styles'
+import { SimilarArtistsProps } from './SimilarArtists.interface'
 
 const SimilarArtists: React.FunctionComponent<SimilarArtistsProps> = ({
   artists
 }) => {
+  console.log(artists)
+
   return (
     <ArtistContainer>
       {artists &&
@@ -18,7 +20,7 @@ const SimilarArtists: React.FunctionComponent<SimilarArtistsProps> = ({
           ({ mbid, image, name }) =>
             image &&
             image.map(
-              img =>
+              (img) =>
                 img.size === 'large' && (
                   <ImageContainer key={mbid}>
                     <Link to={`/artist/${name}`}>
@@ -30,7 +32,7 @@ const SimilarArtists: React.FunctionComponent<SimilarArtistsProps> = ({
             )
         )}
     </ArtistContainer>
-  );
-};
+  )
+}
 
-export default SimilarArtists;
+export default SimilarArtists
